@@ -1,0 +1,80 @@
+.App {
+    text-align: center;
+    color: white;
+}
+*{
+    -ms-overflow-style: none;
+    }
+    ::-webkit-scrollbar {
+    display: none;
+}
+.App > .row {
+    overflow-x: auto !important; 
+    flex-wrap: nowrap;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.image-container {
+    position: relative;
+    transition: 0.2s;
+    width: 200px;
+}
+
+.image-container:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+    color: white;
+}
+
+.overlay {
+    position: absolute;
+    background: rgba(0,0,0,0.8);
+    width: 170px;
+    transition: 0.5s;
+    opacity: 0;
+    bottom: 0;
+    font-size: 0.8rem;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
